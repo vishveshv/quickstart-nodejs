@@ -1,4 +1,4 @@
-# quickstart-nodejs
+# quickstart-nodejs.
 
 Node.js sample application for Screwdriver
 
