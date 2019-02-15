@@ -2,10 +2,6 @@
 # Workflow list definition
 # This list describes the order that the Jobs execute. The "main" Job is always
 # executed first, followed in order of the Jobs listed in this Workflow block.
-workflow:
-  # We define the workflow where the "publish" Job is started after the "main" Job.
-  - publish
-
 
 # Shared definition block
 # This is where you would define any attributes that all your jobs will
@@ -15,6 +11,7 @@ shared:
   # "repo_name:tag_label", where the "tag_label" is optional.
   # Docker image - https://hub.docker.com/r/library/node/
   image: node:6
+  name: vvijay
 
 # Jobs definition block
 # All pipelines have "main" by default, and is implicitly defined.
