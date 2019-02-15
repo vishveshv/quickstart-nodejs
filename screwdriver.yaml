@@ -2,10 +2,6 @@
 # Workflow list definition
 # This list describes the order that the Jobs execute. The "main" Job is always
 # executed first, followed in order of the Jobs listed in this Workflow block.
-workflow:
-  # We define the workflow where the "publish" Job is started after the "main" Job.
-  - publish
-
 
 # Shared definition block
 # This is where you would define any attributes that all your jobs will
@@ -21,6 +17,9 @@ shared:
 jobs:
   # We explicitly define "main" in our configuration so that it does what we want
   # it to do.
+  git_tags:
+    steps:
+      - command: echo 'running screwdriver'
   main:
     # Steps is the ordered list of commands to execute.
     # Each step takes the form "step_name: command_to_run". The "step_name" is a
